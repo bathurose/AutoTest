@@ -23,7 +23,7 @@ public class MyTestCaseTest
     {
         var options = new ChromeOptions();
         options.AddArguments("--lang=en");
-        //options.AddArguments("--headless");
+        options.AddArguments("--headless");
         driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),options);
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
